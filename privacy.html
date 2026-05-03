@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for Bharat Adhikar — India's citizen accountability app." />
+  <title>Privacy Policy — Bharat Adhikar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & base ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #0A1628;
+      --navy-mid:  #152035;
+      --navy-lite: #1E3050;
+      --saffron:   #F47B20;
+      --saffron2:  #FF9933;
+      --gold:      #FFB347;
+      --white:     #FFFFFF;
+      --off-white: #EDF2F7;
+      --text:      #1A2840;
+      --muted:     #5A6E8A;
+      --border:    #D1DCE8;
+      --radius:    12px;
+      --shadow:    0 4px 24px rgba(10,22,40,.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--off-white);
+      overflow-x: hidden;
+    }
+
+    /* ── Scrollbar ────────────────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--off-white); }
+    ::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 3px; }
+
+    /* ── Header ───────────────────────────────────────────────────────────── */
+    header {
+      background: var(--navy);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ashoka-chakra watermark SVG */
+    header::before {
+      content: '';
+      position: absolute;
+      right: -120px; top: -120px;
+      width: 480px; height: 480px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' stroke='%23ffffff08' stroke-width='2' fill='none'/%3E%3Ccircle cx='100' cy='100' r='18' stroke='%23ffffff08' stroke-width='2' fill='none'/%3E%3Cg stroke='%23ffffff06' stroke-width='1.2'%3E%3Cline x1='100' y1='10' x2='100' y2='190'/%3E%3Cline x1='10' y1='100' x2='190' y2='100'/%3E%3Cline x1='27' y1='27' x2='173' y2='173'/%3E%3Cline x1='173' y1='27' x2='27' y2='173'/%3E%3Cline x1='14' y1='63' x2='186' y2='137'/%3E%3Cline x1='186' y1='63' x2='14' y2='137'/%3E%3Cline x1='63' y1='14' x2='137' y2='186'/%3E%3Cline x1='137' y1='14' x2='63' y2='186'/%3E%3Cline x1='28' y1='48' x2='172' y2='152'/%3E%3Cline x1='172' y1='48' x2='28' y2='152'/%3E%3Cline x1='48' y1='28' x2='152' y2='172'/%3E%3Cline x1='152' y1='28' x2='48' y2='172'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+      pointer-events: none;
+    }
+
+    /* Saffron bottom border accent */
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--saffron), var(--saffron2), var(--gold), transparent);
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 52px 32px 44px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand-icon {
+      width: 52px; height: 52px;
+      background: var(--saffron);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(244,123,32,.25);
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.5rem;
+      color: var(--white);
+      letter-spacing: .04em;
+    }
+
+    .brand-name span { color: var(--saffron); }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.18;
+      margin-bottom: 16px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.55);
+      font-family: 'Source Serif 4', serif;
+      font-weight: 300;
+      letter-spacing: .03em;
+    }
+
+    .meta-row span {
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    .meta-row .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--saffron);
+      display: inline-block;
+    }
+
+    /* ── TOC sidebar ──────────────────────────────────────────────────────── */
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 760px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { display: none; }
+    }
+
+    .toc {
+      position: sticky;
+      top: 28px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px 20px;
+      border-left: 4px solid var(--saffron);
+    }
+
+    .toc-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      padding: 0;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      margin-bottom: 10px;
+    }
+
+    .toc ol li::before {
+      content: counter(toc) ". ";
+      color: var(--saffron);
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+
+    .toc a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      line-height: 1.4;
+      transition: color .2s;
+    }
+    .toc a:hover { color: var(--saffron); }
+
+    /* ── Main content ─────────────────────────────────────────────────────── */
+    .content { min-width: 0; }
+
+    /* Summary card */
+    .summary-card {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .summary-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold));
+    }
+
+    .summary-card p {
+      color: rgba(255,255,255,.82);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .summary-card strong { color: var(--saffron); font-style: normal; }
+
+    /* Pillars row */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    .pillar {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border-bottom: 3px solid var(--saffron);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(10,22,40,.14); }
+
+    .pillar-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .pillar-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    /* Sections */
+    section {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      scroll-margin-top: 28px;
+      animation: fadeUp .5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    section:nth-child(1)  { animation-delay: .05s; }
+    section:nth-child(2)  { animation-delay: .10s; }
+    section:nth-child(3)  { animation-delay: .15s; }
+    section:nth-child(4)  { animation-delay: .20s; }
+    section:nth-child(5)  { animation-delay: .25s; }
+    section:nth-child(6)  { animation-delay: .30s; }
+    section:nth-child(7)  { animation-delay: .35s; }
+    section:nth-child(8)  { animation-delay: .40s; }
+    section:nth-child(9)  { animation-delay: .45s; }
+    section:nth-child(10) { animation-delay: .50s; }
+    section:nth-child(11) { animation-delay: .55s; }
+    section:nth-child(12) { animation-delay: .60s; }
+
+    @media (max-width: 600px) {
+      section { padding: 24px 20px; }
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 .section-num {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      width: 32px; height: 32px;
+      background: var(--saffron);
+      color: #fff;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy-mid);
+      margin: 22px 0 10px;
+    }
+
+    p { margin-bottom: 14px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    li { margin-bottom: 7px; line-height: 1.65; }
+
+    /* Data table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 0.88rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 0 0 1px var(--border);
+    }
+
+    .data-table thead {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .data-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .data-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tbody tr:last-child td { border-bottom: none; }
+    .data-table tbody tr:nth-child(even) { background: #F7FAFD; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 20px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .badge-yes  { background: #DCFCE7; color: #15803D; }
+    .badge-no   { background: #FEE2E2; color: #B91C1C; }
+    .badge-anon { background: #FEF3C7; color: #92400E; }
+
+    /* Third-party list */
+    .third-party-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .tp-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      transition: border-color .2s;
+    }
+    .tp-card:hover { border-color: var(--saffron); }
+
+    .tp-name {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+    }
+    .tp-purpose {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .tp-link {
+      font-size: 0.75rem;
+      color: var(--saffron);
+      text-decoration: none;
+    }
+    .tp-link:hover { text-decoration: underline; }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .right-card {
+      background: #F7FAFD;
+      border-radius: var(--radius);
+      padding: 16px;
+      border-left: 3px solid var(--saffron);
+    }
+
+    .right-icon { font-size: 1.4rem; margin-bottom: 6px; }
+    .right-title { font-weight: 600; font-size: 0.88rem; color: var(--navy); margin-bottom: 4px; }
+    .right-desc { font-size: 0.79rem; color: var(--muted); line-height: 1.5; }
+
+    /* Highlight block */
+    .highlight {
+      background: linear-gradient(135deg, #FFF7ED 0%, #FFFBF5 100%);
+      border-left: 4px solid var(--saffron);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 0.92rem;
+    }
+
+    .highlight strong { color: var(--saffron); }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      color: rgba(255,255,255,.85);
+      font-size: 0.92rem;
+    }
+
+    .contact-card a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.45);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold), transparent);
+    }
+
+    footer a { color: var(--saffron); text-decoration: none; }
+    footer strong { color: rgba(255,255,255,.75); }
+
+    /* Progress bar at very top */
+    #reading-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--saffron), var(--gold));
+      width: 0%;
+      z-index: 9999;
+      transition: width .1s;
+    }
+
+    /* Back to top */
+    #back-top {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: var(--saffron);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(244,123,32,.4);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .3s;
+      z-index: 999;
+    }
+    #back-top.visible { opacity: 1; pointer-events: auto; }
+    #back-top:hover { transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+<div id="reading-bar"></div>
+<a id="back-top" href="#top" aria-label="Back to top">↑</a>
+
+<!-- ── HEADER ──────────────────────────────────────────────────────────────── -->
+<header id="top">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">🏛️</div>
+      <div class="brand-name">BHARAT <span>ADHIKAR</span></div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta-row">
+      <span><span class="dot"></span> Effective Date: 4 May 2025</span>
+      <span><span class="dot"></span> Last Updated: 4 May 2025</span>
+      <span><span class="dot"></span> Version 1.0</span>
+      <span><span class="dot"></span> Jurisdiction: India (IT Act 2000)</span>
+    </div>
+  </div>
+</header>
+
+<!-- ── LAYOUT ──────────────────────────────────────────────────────────────── -->
+<div class="layout">
+
+  <!-- Sidebar TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Overview</a></li>
+      <li><a href="#s2">Data We Collect</a></li>
+      <li><a href="#s3">How We Use Data</a></li>
+      <li><a href="#s4">Data Sharing</a></li>
+      <li><a href="#s5">Third-Party Services</a></li>
+      <li><a href="#s6">Location Data</a></li>
+      <li><a href="#s7">Voice &amp; Speech</a></li>
+      <li><a href="#s8">Anonymity &amp; Accounts</a></li>
+      <li><a href="#s9">Data Retention</a></li>
+      <li><a href="#s10">Security</a></li>
+      <li><a href="#s11">Your Rights</a></li>
+      <li><a href="#s12">Children</a></li>
+      <li><a href="#s13">Changes</a></li>
+      <li><a href="#s14">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content" role="main">
+
+    <!-- Summary card -->
+    <div class="summary-card">
+      <p>
+        <strong>Plain English first:</strong> Bharat Adhikar is built to empower citizens, not to harvest their data.
+        We collect only what is strictly necessary to deliver each feature. We do not sell your data,
+        we do not build advertising profiles, and your complaint content is never shared without your
+        explicit consent. Participation can be <strong>fully anonymous</strong>.
+      </p>
+    </div>
+
+    <!-- Privacy pillars -->
+    <div class="pillars" role="list">
+      <div class="pillar" role="listitem">
+        <div class="pillar-icon">🔒</div>
+        <div class="pillar-label">No Data Sales</div>
+      </div>
+      <div class="pillar" role="listitem">
+        <div class="pillar-icon">🎭</div>
+        <div class="pillar-label">Anonymous Use</div>
+      </div>
+      <div class="pillar" role="listitem">
+        <div class="pillar-icon">📍</div>
+        <div class="pillar-label">Location Optional</div>
+      </div>
+      <div class="pillar" role="listitem">
+        <div class="pillar-icon">🎙️</div>
+        <div class="pillar-label">Voice Not Stored</div>
+      </div>
+      <div class="pillar" role="listitem">
+        <div class="pillar-icon">🇮🇳</div>
+        <div class="pillar-label">India-Compliant</div>
+      </div>
+    </div>
+
+    <!-- S1 -->
+    <section id="s1">
+      <h2><span class="section-num">1</span> Overview &amp; Who We Are</h2>
+      <p>
+        This Privacy Policy applies to the <strong>Bharat Adhikar</strong> mobile application
+        ("App", "we", "us", "our") operated by an independent developer based in India.
+        The App provides citizens with tools to file government complaints, track election promises,
+        crowd-source infrastructure audits (Pramaan), and draft formal letters to authorities.
+      </p>
+      <p>
+        This policy explains what personal information we collect, why, how it is used, and the
+        choices you have. By using the App you agree to this policy. If you disagree, please
+        uninstall the App.
+      </p>
+      <div class="highlight">
+        <strong>Applicable law:</strong> This policy is governed by the Information Technology Act,
+        2000 and the Information Technology (Reasonable Security Practices and Procedures and
+        Sensitive Personal Data or Information) Rules, 2011, India. Where applicable, we also align
+        with international standards including GDPR principles for users accessing from the EU.
+      </div>
+    </section>
+
+    <!-- S2 -->
+    <section id="s2">
+      <h2><span class="section-num">2</span> Data We Collect</h2>
+      <p>We collect data in two ways: data you actively provide and data collected automatically.</p>
+
+      <h3>2.1 Data You Provide</h3>
+      <table class="data-table" aria-label="User-provided data categories">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>When Collected</th>
+            <th>Mandatory?</th>
+            <th>Stored?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Complaint text / voice transcript</td>
+            <td>When filing a complaint</td>
+            <td>Yes (for feature)</td>
+            <td><span class="badge badge-no">Local only</span></td>
+          </tr>
+          <tr>
+            <td>Audit photographs</td>
+            <td>When submitting a Pramaan audit</td>
+            <td>Yes (for feature)</td>
+            <td><span class="badge badge-yes">Cloud (Firebase)</span></td>
+          </tr>
+          <tr>
+            <td>Audit description text</td>
+            <td>When submitting a Pramaan audit</td>
+            <td>Yes (for feature)</td>
+            <td><span class="badge badge-yes">Cloud (Firestore)</span></td>
+          </tr>
+          <tr>
+            <td>Promise votes (verified/discrepancy)</td>
+            <td>When voting on a manifesto promise</td>
+            <td>No</td>
+            <td><span class="badge badge-anon">Anonymous, Firestore</span></td>
+          </tr>
+          <tr>
+            <td>Comments on promises</td>
+            <td>When adding a comment</td>
+            <td>No</td>
+            <td><span class="badge badge-no">Local device only</span></td>
+          </tr>
+          <tr>
+            <td>Manifesto PDF / URL</td>
+            <td>When using the AI Agent sync (admin only)</td>
+            <td>No</td>
+            <td><span class="badge badge-no">Processed, not stored</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Data Collected Automatically</h3>
+      <table class="data-table" aria-label="Automatically collected data">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Source</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anonymous device ID (Firebase UID)</td>
+            <td>Firebase Auth — anonymous sign-in</td>
+            <td>Session management, no personal identity</td>
+          </tr>
+          <tr>
+            <td>GPS coordinates</td>
+            <td>Device GPS (with permission)</td>
+            <td>Map, local feed, 5 km audit radius</td>
+          </tr>
+          <tr>
+            <td>Reverse-geocoded district/state</td>
+            <td>Derived from GPS</td>
+            <td>Feed filtering only, not stored raw</td>
+          </tr>
+          <tr>
+            <td>App crash reports</td>
+            <td>Firebase Crashlytics (if enabled)</td>
+            <td>Stability improvements</td>
+          </tr>
+          <tr>
+            <td>Ad interaction signals</td>
+            <td>Google AdMob SDK</td>
+            <td>Ad delivery — see §5</td>
+          </tr>
+          <tr>
+            <td>Device type, OS version</td>
+            <td>AdMob / Firebase</td>
+            <td>Compatibility &amp; ad targeting</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- S3 -->
+    <section id="s3">
+      <h2><span class="section-num">3</span> How We Use Your Data</h2>
+      <p>We use collected data <em>only</em> for the following purposes:</p>
+      <ul>
+        <li><strong>Complaint generation:</strong> Your spoken or typed complaint is processed by an AI model to draft a formal letter. This processing happens via our AI proxy (Supabase Edge Function) and the generated text is returned to your device. We do not store the raw voice audio or the raw complaint text on our servers.</li>
+        <li><strong>Pramaan audit map:</strong> Your submitted audit photo, GPS coordinates, and description are stored in Firebase to display on the public map. Your Firebase anonymous UID is attached as a Citizen ID — never your name or email.</li>
+        <li><strong>Election promise tracking:</strong> Your vote (verified/discrepancy) is written as an atomic increment to Firestore. No identifier beyond the anonymous UID is attached.</li>
+        <li><strong>Local feed filtering:</strong> Your GPS coordinates are used client-side and for the Firestore query. Raw coordinates are not stored separately.</li>
+        <li><strong>App improvement:</strong> Aggregated, non-personal crash and performance data via Firebase.</li>
+        <li><strong>Ad delivery:</strong> Google AdMob uses device signals to serve contextual ads. We do not pass any complaint content to AdMob.</li>
+      </ul>
+      <div class="highlight">
+        <strong>We never use your data for:</strong> profiling, political targeting, selling to third parties, training our own AI models on your content, or any purpose not listed above.
+      </div>
+    </section>
+
+    <!-- S4 -->
+    <section id="s4">
+      <h2><span class="section-num">4</span> Data Sharing &amp; Disclosure</h2>
+      <p>We do <strong>not</strong> sell, rent, or trade your personal information. We share data only in these limited circumstances:</p>
+      <ul>
+        <li><strong>With infrastructure providers</strong> (Google Firebase, Supabase) solely to operate the App — governed by their respective data processing agreements.</li>
+        <li><strong>With Google AdMob</strong> for ad serving — AdMob may collect its own data under Google's privacy policy.</li>
+        <li><strong>With AI model providers</strong> (Google Gemini, Anthropic Claude, Groq, Mistral, Cohere) to generate complaint letters. Only the text you provide for complaint generation is sent. These providers process the request and return the result; they are contractually prohibited from storing your queries for training without consent.</li>
+        <li><strong>Public audit data:</strong> When you submit a Pramaan audit, the photo, description, and location are visible to all app users on the map. This is an intentional, consent-based feature — you confirm before submitting.</li>
+        <li><strong>Legal requirement:</strong> We may disclose information if required by Indian law, court order, or to prevent fraud or imminent harm.</li>
+      </ul>
+    </section>
+
+    <!-- S5 -->
+    <section id="s5">
+      <h2><span class="section-num">5</span> Third-Party Services &amp; Their Policies</h2>
+      <p>The App integrates the following third-party services. Each operates under its own privacy policy:</p>
+
+      <div class="third-party-list">
+        <div class="tp-card">
+          <div class="tp-name">Firebase (Google)</div>
+          <div class="tp-purpose">Auth, Firestore DB, Storage, Crashlytics</div>
+          <a class="tp-link" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">Google AdMob</div>
+          <div class="tp-purpose">Banner &amp; interstitial ads</div>
+          <a class="tp-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">Supabase</div>
+          <div class="tp-purpose">AI proxy / Edge Functions</div>
+          <a class="tp-link" href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">Google Gemini</div>
+          <div class="tp-purpose">Primary AI model for letter generation</div>
+          <a class="tp-link" href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Terms ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">Anthropic Claude</div>
+          <div class="tp-purpose">AI fallback model</div>
+          <a class="tp-link" href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">Groq</div>
+          <div class="tp-purpose">AI fallback model</div>
+          <a class="tp-link" href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">Mistral AI</div>
+          <div class="tp-purpose">AI fallback model</div>
+          <a class="tp-link" href="https://mistral.ai/privacy/" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+        <div class="tp-card">
+          <div class="tp-name">OpenStreetMap</div>
+          <div class="tp-purpose">Map tile provider (flutter_map)</div>
+          <a class="tp-link" href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy Policy ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- S6 -->
+    <section id="s6">
+      <h2><span class="section-num">6</span> Location Data</h2>
+      <p>
+        Location access is requested at runtime and is <strong>entirely optional</strong>.
+        If denied, the App defaults to a national India view and all features remain available
+        except local-radius filtering.
+      </p>
+      <ul>
+        <li>GPS coordinates are used <strong>on-device</strong> to center the map and filter the Local feed.</li>
+        <li>When you submit a Pramaan audit, your coordinates at time of submission are stored in Firestore and displayed publicly on the map. You are informed of this before submission.</li>
+        <li>We do not continuously track your location in the background.</li>
+        <li>Raw GPS coordinates are never sent to advertising networks.</li>
+      </ul>
+    </section>
+
+    <!-- S7 -->
+    <section id="s7">
+      <h2><span class="section-num">7</span> Voice &amp; Speech Data</h2>
+      <p>
+        The complaint flow uses your device microphone to capture speech via Android's native
+        Speech Recognition API. This is handled entirely by your device's OS and Google's
+        Speech-to-Text service (if using Android's default recognizer).
+      </p>
+      <ul>
+        <li><strong>We do not record, store, or transmit your raw voice audio.</strong></li>
+        <li>The transcribed text is displayed to you before being processed by the AI.</li>
+        <li>You can edit or discard the transcript at any time before proceeding.</li>
+        <li>The transcribed text is processed by the AI letter-generation pipeline and then discarded — only the generated letter is returned to your device.</li>
+      </ul>
+      <div class="highlight">
+        Microphone permission is requested only when you tap the microphone button. The App does not access your microphone at any other time.
+      </div>
+    </section>
+
+    <!-- S8 -->
+    <section id="s8">
+      <h2><span class="section-num">8</span> Anonymity &amp; Account Information</h2>
+      <p>
+        Bharat Adhikar uses <strong>Firebase Anonymous Authentication</strong>. When you first open
+        the App, a random anonymous UID is generated. This UID:
+      </p>
+      <ul>
+        <li>Is not linked to your name, email, phone number, or any real-world identity.</li>
+        <li>Is stored only on your device and in Firebase Auth.</li>
+        <li>Is used as a "Citizen ID" when you submit audits — visible to other users in that format.</li>
+        <li>Can be reset by clearing the App's data or reinstalling.</li>
+      </ul>
+      <p>
+        We do not offer account registration. There is no login, no email address required,
+        and no password. This is by design.
+      </p>
+    </section>
+
+    <!-- S9 -->
+    <section id="s9">
+      <h2><span class="section-num">9</span> Data Retention</h2>
+      <table class="data-table" aria-label="Data retention schedule">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Retention Period</th>
+            <th>Deletion Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anonymous Firebase UID</td>
+            <td>Until app data is cleared or account deleted</td>
+            <td>Clear app data / Reinstall</td>
+          </tr>
+          <tr>
+            <td>Pramaan audit submissions</td>
+            <td>Indefinitely (public record)</td>
+            <td>Contact us to request deletion</td>
+          </tr>
+          <tr>
+            <td>Promise vote counts</td>
+            <td>Indefinitely (aggregated)</td>
+            <td>Not individually traceable</td>
+          </tr>
+          <tr>
+            <td>Complaint text (AI input)</td>
+            <td>Not retained</td>
+            <td>N/A — processed in transit only</td>
+          </tr>
+          <tr>
+            <td>Local comments &amp; votes</td>
+            <td>On-device only; until app is cleared</td>
+            <td>Clear app data</td>
+          </tr>
+          <tr>
+            <td>Crash logs</td>
+            <td>90 days (Firebase default)</td>
+            <td>Auto-purged by Firebase</td>
+          </tr>
+          <tr>
+            <td>Ad interaction data</td>
+            <td>Governed by Google's AdMob policy</td>
+            <td>Via Google account settings</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- S10 -->
+    <section id="s10">
+      <h2><span class="section-num">10</span> Security</h2>
+      <p>We implement the following security measures in line with industry standards:</p>
+      <ul>
+        <li><strong>TLS/HTTPS</strong> for all network communication between the App and Firebase/Supabase.</li>
+        <li><strong>Supabase Edge Functions</strong> as a secure proxy for all AI API calls — your device never holds AI provider API keys.</li>
+        <li><strong>Firebase Security Rules</strong> to restrict read/write access to Firestore and Firebase Storage by authenticated (anonymous) users only.</li>
+        <li><strong>No hardcoded secrets</strong> in the App binary — all sensitive keys are server-side.</li>
+        <li><strong>Minimal data collection</strong> as the primary security measure — data we don't collect cannot be breached.</li>
+      </ul>
+      <p>
+        While we take reasonable precautions, no digital system is 100% secure. In the event of
+        a data breach that affects your information, we will notify affected users through the App
+        and/or the Play Store listing within a reasonable timeframe as required by Indian law.
+      </p>
+    </section>
+
+    <!-- S11 -->
+    <section id="s11">
+      <h2><span class="section-num">11</span> Your Rights</h2>
+      <p>You have the following rights regarding your data. Where technically feasible, we will honour requests within 30 days:</p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <div class="right-icon">🔍</div>
+          <div class="right-title">Right to Access</div>
+          <div class="right-desc">Request a summary of data we hold linked to your anonymous UID.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-icon">🗑️</div>
+          <div class="right-title">Right to Deletion</div>
+          <div class="right-desc">Request deletion of your audit submissions from Firestore. Email us with your Citizen ID.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-icon">✏️</div>
+          <div class="right-title">Right to Correction</div>
+          <div class="right-desc">Request correction of factually incorrect audit data you submitted.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-icon">📤</div>
+          <div class="right-title">Right to Portability</div>
+          <div class="right-desc">Request your submitted audit data in JSON format.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-icon">🚫</div>
+          <div class="right-title">Right to Object</div>
+          <div class="right-desc">Object to processing of your data for any purpose other than stated here.</div>
+        </div>
+        <div class="right-card">
+          <div class="right-icon">📵</div>
+          <div class="right-title">Opt-out of Ads</div>
+          <div class="right-desc">Use Android's "Opt out of Ads Personalization" in Settings → Google → Ads.</div>
+        </div>
+      </div>
+      <p style="margin-top:18px;">To exercise any right, contact us at the address in §14. We do not require you to reveal your real identity to exercise these rights — your anonymous Citizen ID is sufficient.</p>
+    </section>
+
+    <!-- S12 -->
+    <section id="s12">
+      <h2><span class="section-num">12</span> Children's Privacy</h2>
+      <p>
+        Bharat Adhikar is not directed at children under the age of <strong>13 years</strong>.
+        We do not knowingly collect personal information from children under 13. If you are a
+        parent or guardian and believe your child has provided data through this App, please
+        contact us immediately and we will delete the data promptly.
+      </p>
+      <p>
+        Users between 13 and 18 should use the App only with parental guidance.
+      </p>
+    </section>
+
+    <!-- S13 -->
+    <section id="s13">
+      <h2><span class="section-num">13</span> Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes in the App,
+        legal requirements, or industry best practices. When we make material changes, we will:
+      </p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page.</li>
+        <li>Post a notice within the App on next launch.</li>
+        <li>For significant changes, request explicit re-acknowledgement.</li>
+      </ul>
+      <p>
+        We encourage you to review this page periodically. Continued use of the App after changes
+        take effect constitutes acceptance of the revised policy.
+      </p>
+      <p>
+        Previous versions of this policy are available on request.
+      </p>
+    </section>
+
+    <!-- S14 -->
+    <section id="s14">
+      <h2><span class="section-num">14</span> Contact Us</h2>
+      <div class="contact-card">
+        <p style="margin-bottom:16px; color:rgba(255,255,255,.6); font-size:0.9rem;">
+          For privacy requests, data deletion, or any concerns regarding this policy:
+        </p>
+        <p><strong style="color:#fff;">App:</strong> Bharat Adhikar</p>
+        <p><strong style="color:#fff;">Developer:</strong> Independent Developer, India</p>
+        <p><strong style="color:#fff;">Email:</strong> <a href="mailto:privacy@bharatadhikar.app">privacy@bharatadhikar.app</a></p>
+        <p><strong style="color:#fff;">Response time:</strong> Within 30 days of receipt</p>
+        <p style="margin-top:16px; font-size:0.82rem; color:rgba(255,255,255,.4);">
+          Please include "Privacy Request" in the subject line and provide your anonymous
+          Citizen ID (visible in the Pramaan screen) to help us locate your data.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────────────────── -->
+<footer>
+  <p style="margin-bottom:8px;">
+    <strong>Bharat Adhikar</strong> — Jan Shakti, Jan Jawabdehi
+  </p>
+  <p>
+    © 2026 Bharat Adhikar. All rights reserved. &nbsp;·&nbsp;
+    <a href="#top">Back to top ↑</a>
+  </p>
+  <p style="margin-top:8px; font-size:0.72rem;">
+    This policy was last reviewed on 4 May 2025 and complies with the
+    Information Technology Act, 2000 (India) and aligns with GDPR principles.
+  </p>
+</footer>
+
+<script>
+  // Reading progress bar
+  const bar = document.getElementById('reading-bar');
+  const btn = document.getElementById('back-top');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = Math.min((scrollTop / docHeight) * 100, 100) + '%';
+    btn.classList.toggle('visible', scrollTop > 400);
+  }, { passive: true });
+</script>
+</body>
+</html>
